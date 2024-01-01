@@ -14,11 +14,6 @@ print(hangman_art.hangman_start)
 word_chosen = str(random.choice(hangman_dictionary.word_list))
 
 
-# def create_blank_word(word_chosen):
-#     for i in range(0, len(word_chosen)):
-#         word = word[:i]+'_'+word[i+1:]  #colon after 'i' returns the word inclusive of the letter at 'i'. Hence add 1 to ignore the letter at 'i'
-#     return word
-
 def create_blank_word(word_chosen):
     word = ''
     for i in range(0, len(word_chosen)):
@@ -41,7 +36,6 @@ def play_the_game(word_chosen):
     hangman_index = 0;
     hangman = ""
     while not hangman.__eq__(hangman_art.hangman_orig) and not word.__eq__(word_chosen):
-        #os.system('clear')
         print(hangman)
         print(word)
         letter = input("guess a letter - ")
@@ -61,24 +55,6 @@ def play_the_game(word_chosen):
 
 
 play_the_game(word_chosen)
-
-
-# while(not word.__eq__(word_chosen)):
-#     letter = input("guess a letter - ")
-#     if(word_chosen.__contains__(letter)):
-#         word=replace_word_with_letter(letter,word,word_chosen)
-#         print(word)
-#     else:
-#         hangman.replace('0',24)
-#         print(hangman)
-
-
-# name="ummulkiram"
-# namex="____lkiram"
-# for i in re.finditer("m",name):
-#     #indice=[i.start()]
-#     namex=namex[:(i.start())]+'m'+namex[(i.start()+1):]
-# print(namex)
 
 
 
