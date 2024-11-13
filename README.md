@@ -1,1 +1,1 @@
-# games-in-python
+# Just some fun game implementations in python. 
